@@ -1,5 +1,7 @@
 Notes on this build:
 
+!! It is recommended you play in "windowed" mode because there is no in-game way to close !!
+
  - Movement: there are 2 modes for movement, "swipe" and "tap". 
 	The toggle switch above the swipe pad in the bottom left switches between the two 
 	(this switch won't stay here, eventually it will become part of a "settings" menu or 
