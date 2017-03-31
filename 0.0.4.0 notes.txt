@@ -1,11 +1,18 @@
-***** NEW IN 0.0.3.0 *****
+***** NEW IN 0.0.4.0 *****
 
-- Enemy NPC: Enemy randomly moves 1 tile in a random direction (or decides to stay) every .5s
-	Player must now be lined up with enemy for buster/charged shots to deal damage
-	Reducing enemy HP to 0 removes the enemy and displays a victory splash screen
+- Chip design updated:
+	~ Cost display moved from lower right to upper right
+	+ Cost display given random color when created/drawn
+	+ Element/power display added (power = cost x 10; element is random)
+
+- Chip Color Combo System added:
+	When using consecutive chips of the same color, all chips after first will cost 1 less
+	White chips will not combo with each other, but will not break other color combos
+	Grey chips will not combo with each other, but WILL break other color combos
+	Drawing chips breaks the current combo 
 
 
-##### Old build notes updated to reflect 0.0.3.0 changes #####
+##### Old build notes updated to reflect 0.0.4.0 changes #####
 
 - KEY INPUT MODE
 	- w/a/s/d movement
@@ -34,6 +41,10 @@
 	other chips will shift into place (chips always fill from the left), and your energy will drop accordingly. 
 	All chips are the same apart from having different costs. 
 	Chips have no effect when "used"(clicked) other than reducing energy and vanishing
+
+- Enemy NPC: Enemy randomly moves 1 tile in a random direction (or decides to stay) every .5s
+	Player must now be lined up with enemy for buster/charged shots to deal damage
+	Reducing enemy HP to 0 removes the enemy and displays a victory splash screen
 
 
 !!!!! KNOWN ISSUES !!!!!
