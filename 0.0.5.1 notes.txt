@@ -1,0 +1,72 @@
+***** NEW IN 0.0.5.1 *****
+
+ - MENU: Type name and press enter to access main menu
+
+ - ONLINE PLAY:	!! still being tested !!
+	host/join games
+
+ - Training Mode:
+	Single player against training dummy
+	Dummy moves randomly and now occasionally shoots! ("PEW PEW!")
+	
+
+
+##### Old build notes updated to reflect 0.0.4.0 changes #####
+
+- KEY INPUT MODE
+	- w/a/s/d movement
+	- "use" chips with 0-5
+	- +/= adds chips
+	- Spacebar fires/charges buster
+	Checkbox below exit button toggles key overlay/input mode
+
+- Movement: there are 2 modes for movement, "swipe" and "tap". 
+	The toggle switch above the swipe pad in the bottom left switches between the two 
+	(this switch won't stay here, eventually it will become part of a "settings" menu or 
+	something like that, but this is just for temporary convenience). 
+	In "swipe" mode, you click and drag (with the mouse) within the swipe pad area 
+	to move your character (movement is input when your mouse leaves the pad or you release the mouse button), 
+	and in "tap" mode, 4 buttons appear on the pad that can be pressed for up/down/let/right movement.
+
+ - Buster: Tapping the buster button fires a shot (invisibly) for 1 damage
+	Holding down the buster button will charge your buster. 
+	Once the ring around the buster button is full, releasing the button (mouse) fires a 10 damage shot
+
+ - Draw: Clicking the draw button with at least 3 energy (while you have fewer than 6 chips) 
+	will spend 3 energy to add a chip
+
+ - Chips: Chips are given random costs when they are created/added. 
+	By clicking on a chip when you have enough energy, the chip will disappear, 
+	other chips will shift into place (chips always fill from the left), and your energy will drop accordingly. 
+	All chips are the same apart from having different costs. 
+	Chips have no effect when "used"(clicked) other than reducing energy and vanishing
+
+- Enemy NPC: Enemy randomly moves 1 tile in a random direction (or decides to stay) every .5s
+	Player must now be lined up with enemy for buster/charged shots to deal damage
+	Reducing enemy HP to 0 removes the enemy and displays a victory splash screen
+
+- Chip design updated:
+	~ Cost display moved from lower right to upper right
+	+ Cost display given random color when created/drawn
+	+ Element/power display added (power = cost x 10; element is random)
+
+- Chip Color Combo System added:
+	When using consecutive chips of the same color, all chips after first will cost 1 less
+	White chips will not combo with each other, but will not break other color combos
+	Grey chips will not combo with each other, but WILL break other color combos
+	Drawing chips breaks the current combo 
+
+
+!!!!! KNOWN ISSUES !!!!!
+
+- Swipe/Tap mode slider toggle and Key Input Mode check toggle react to key inputs
+	after clicking either interactable, A/D will move Swipe/Tap toggle, and Space will
+	uncheck Key Input toggle (makes using the buster problematic)
+*Current Solution: After toggling settings, click anywhere on the screen that isn't an interactable
+	to have key inputs not sent to interactable toggles.
+
+- Enemy HP display extends beyond the info box at the top right
+	(this issue did not exist in the editor, but does when running build from Unity Player)
+
+- Enemy HP may show 1 when defeated and the game is over
+	(matter of the order in which update methods are called)
