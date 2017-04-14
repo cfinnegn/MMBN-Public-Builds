@@ -1,4 +1,4 @@
-***** NEW IN 0.0.6.2 *****
+***** NEW IN 0.0.6.3 *****
 
 Starter Folder chips:
 
